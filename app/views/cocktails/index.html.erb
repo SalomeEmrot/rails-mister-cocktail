@@ -1,0 +1,6 @@
+<h2>Our Cocktails</h2>
+
+<% @cocktails.each do |cocktail| %>
+<%= cocktail.name %>
+<%= link_to 'Show  Recipe', cocktail, class: "btn btn-outline-success" %>
+<%end%>

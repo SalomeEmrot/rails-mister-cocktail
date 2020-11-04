@@ -1,0 +1,22 @@
+<p>
+  <%= @cocktail.name %>
+</p>
+
+<ul class="list-group">
+  <%= link_to new_cocktail_dose_path(@cocktail), class: 'btn btn-success' do  %>
+    + Add a dose
+  <% end %>
+
+
+  <% @cocktail.doses.each do |dose| %>
+  <li class="list-group-item">
+    <div class="d-flex justify-content-between">
+      <p><%= dose.description %></p>
+      <p><%= dose.ingredient.name %></p>
+    </div>
+
+  </li>
+  <% end %>
+</ul>
+
+<%= link_to 'Back to List of Cocktails', cocktails_path %>
